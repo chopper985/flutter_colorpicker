@@ -299,6 +299,7 @@ class _ColorPickerState extends State<ColorPicker> {
     if (MediaQuery.of(context).orientation == Orientation.portrait ||
         widget.portraitOnly) {
       return Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           SizedBox(
             width: widget.colorPickerWidth,
@@ -322,6 +323,7 @@ class _ColorPickerState extends State<ColorPicker> {
                 ),
                 Expanded(
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       SizedBox(
                           height: 40.0,
@@ -393,6 +395,7 @@ class _ColorPickerState extends State<ColorPicker> {
               height: widget.colorPickerWidth * widget.pickerAreaHeightPercent,
               child: colorPicker()),
           Column(
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Row(
                 children: <Widget>[
@@ -408,6 +411,7 @@ class _ColorPickerState extends State<ColorPicker> {
                     child: ColorIndicator(currentHsvColor),
                   ),
                   Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       SizedBox(
                           height: 40.0,
@@ -680,6 +684,7 @@ class _SlidePickerState extends State<SlidePicker> {
     ];
 
     return Column(
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
@@ -754,6 +759,7 @@ class _HueRingPickerState extends State<HueRingPicker> {
     if (MediaQuery.of(context).orientation == Orientation.portrait ||
         widget.portraitOnly) {
       return Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ClipRRect(
             borderRadius: widget.pickerAreaBorderRadius,
@@ -850,6 +856,7 @@ class _HueRingPickerState extends State<HueRingPicker> {
                           strokeWidth: widget.hueRingStrokeWidth),
                     ),
                     Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         SizedBox(height: widget.colorPickerHeight / 8.5),
                         ColorIndicator(currentHsvColor),
